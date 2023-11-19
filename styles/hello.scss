@@ -1,0 +1,278 @@
+$color-fondo-claro: white;
+$color-de-letra: #48744C;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Signika Negative', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 15vh;
+    background-color: $color-fondo-claro;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgb(82, 82, 82);
+    
+
+    .logo {
+        height: 100%;
+
+    }
+
+    .menu_icon {
+        height: 50%;
+    }
+}
+
+.menu_nav {
+    width: 30%;
+    position: absolute;
+    right: -50%;
+    top: 85px;
+    background-color: #fff;
+    padding: 20px;
+    min-height: 100%;
+    box-shadow: -19px -1px 22px -15px rgba(0, 0, 0, 0.29);
+    transition: all 0.25s ease;
+
+    &.show {
+        right: 0;
+    }
+
+    nav {
+        margin: 20px auto;
+
+        p {
+            font-size: 1.3rem;
+            padding: 20px;
+            border-radius: 7px;
+            transition: all 0.3s ease;
+
+        }
+
+        p:hover {
+            background-color: #48744C;
+        }
+    }
+
+}
+
+main {
+    padding: 0;
+    margin: 0;
+
+    .principal {
+        width: 100vw;
+        height: 85vh;
+        background-color: $color-de-letra;
+        color: $color-fondo-claro;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+        gap: 30px;
+
+        h1 {
+            font-size: 3rem;
+            color: $color-fondo-claro;
+        }
+
+        img {
+            width: 550px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px rgb(96, 96, 96);
+        }
+    }
+
+    .historia {
+        background-color: $color-fondo-claro;
+        width: 100vw;
+        padding: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+
+        .his {
+            font-size: 1.7rem;
+            color: $color-de-letra;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 20px;
+                box-sizing: border-box;
+
+                .año {
+                    width: 30%;
+                    font-size: 2.5rem;
+                }
+
+                .texto {
+                    width: 70%;
+                    font-size: 1.5rem;
+                }
+            }
+
+        }
+    }
+
+    .galeria {
+        width: 100vw;
+        min-height: 100vh;
+        background-color: $color-de-letra;
+        color: $color-fondo-claro;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            font-size: 2rem;
+            margin: 20px auto;
+            box-sizing: border-box;
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            img {
+                width: 400px;
+                padding: 40px;
+                border-radius: 10px;
+
+            }
+        }
+    }
+    .menu_de_comida{
+        width: 100vw;
+        height: 100vh;
+        background-color:$color-fondo-claro ;
+        color: $color-de-letra; 
+        display: flex;
+        flex-direction: column;
+        
+        
+        h1{
+            font-size: 2rem;
+            margin :50px auto; 
+        }
+        button{
+            margin: 20px auto; 
+            padding: 20px; 
+            width: 270px; 
+            font-size: 20px;
+            border-radius: 5px;
+            background-color: $color-de-letra;
+            color: $color-fondo-claro; 
+            border: 2px solid black; 
+            transition: .3s all ease;
+        }
+        button:hover{
+            background-color: $color-fondo-claro;
+            color: $color-de-letra
+    
+        }
+        div{
+            width: 500px;
+            
+            margin: 0 auto; 
+            article {
+                margin: 20px auto; 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: $color-fondo-claro; 
+                border-radius: 20px;
+                border: 3px solid black; 
+                background-color: #48744C;
+                margin: 0 auto; 
+                p{
+                     font-size: clamp(16px, 3rem, 3rem);
+                     margin: 20px auto;
+                     padding: 20px; 
+                     
+                }
+
+            }
+        }
+        
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .principal {
+        h1 {
+            font-size: 1rem;
+
+            img {
+                width: 400px;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 666px) {
+    .his div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+
+        .año {
+            font: 1.5rem;
+            width: 60vw;
+            margin: 0;
+        }
+
+        .texto {
+            font-size: 1rem;
+            width: 60vw;
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        display: none;
+    }
+    .principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 275px;
+        }
+    }
+
+    .galeria article img {
+        width: 300px;
+    }
+
+    .menu_nav {
+        width: 100vw;
+        right: -150%; 
+        box-sizing: border-box;
+    }
+}
+
