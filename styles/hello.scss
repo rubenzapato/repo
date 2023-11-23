@@ -11,6 +11,7 @@ $color-de-letra: #48744C;
 header {
     display: flex;
     align-items: center;
+    position: fixed;
     justify-content: space-between;
     width: 100vw;
     height: 15vh;
@@ -30,8 +31,8 @@ header {
 }
 
 .menu_nav {
-    width: 30%;
-    position: absolute;
+    width: clamp(300px, 30vw, 500px);
+    position: fixed;
     right: -50%;
     top: 85px;
     background-color: #fff;
@@ -68,7 +69,7 @@ main {
 
     .principal {
         width: 100vw;
-        height: 85vh;
+        height: 100vh;
         background-color: $color-de-letra;
         color: $color-fondo-claro;
         display: flex;
@@ -135,19 +136,19 @@ main {
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
 
         h3 {
             font-size: 2rem;
             margin: 20px auto;
             box-sizing: border-box;
+            padding: 30px; 
         }
 
         article {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center ;
 
             img {
                 width: 400px;
@@ -216,6 +217,9 @@ main {
 
 
 @media screen and (max-width: 900px) {
+    body{
+        max-width: 100vw; 
+    }
     .principal {
         h1 {
             font-size: 1rem;
@@ -229,6 +233,9 @@ main {
 }
 
 @media screen and (max-width: 666px) {
+    body{
+        max-width: 100vw; 
+    }
     .his div {
         display: flex;
         flex-direction: column;
@@ -251,6 +258,9 @@ main {
 }
 
 @media screen and (max-width: 600px) {
+    body{
+        max-width: 100vw; 
+    }
     .logo {
         display: none;
     }
